@@ -1,11 +1,10 @@
 import React from 'react'
-import Child from './Child'
+import SocialShare from './SocialShare'
 
 function parent() {
   return (
     <>
-      <Child text={'Hello'} name={'Eddy'} />
-      <Child />
+      <SocialShare url="http://localhost:3000/" round={false} />
     </>
   )
 }

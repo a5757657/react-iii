@@ -1,12 +1,18 @@
-import React from 'react'
+import PropTypes from 'prop-types'
 
 function Child(props) {
   console.log(props)
+
   return (
     <>
-      {props.text}, {props.name}
+      {props.name}, {props.text}
     </>
   )
+}
+
+Child.propTypes = {
+  name: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
 }
 
 Child.defaultProps = {
