@@ -10,7 +10,17 @@ function ProductItem(props) {
   //        price:300
   //    }
 
-  const { id, name, categroy, image, price, setData, amount, data } = props
+  const {
+    id,
+    name,
+    categroy,
+    image,
+    price,
+    setData,
+    amount,
+    data,
+    handleDelete,
+  } = props
   return (
     <>
       <div className="row border-top border-bottom">
@@ -57,7 +67,9 @@ function ProductItem(props) {
           </div>
           <div className="col">
             ${price}
-            <span className="close">&#10005;</span>
+            <span className="close" onClick={handleDelete}>
+              &#10005;
+            </span>
           </div>
         </div>
       </div>

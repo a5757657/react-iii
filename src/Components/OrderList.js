@@ -3,6 +3,16 @@ import ProductItem from './ProductItem'
 
 function OrderList(props) {
   const { data, setData } = props
+  const handleDelete = (id) => {
+    //1. 先從原本的陣列(物件)拷貝出一個新陣列(物件)
+    //2. 在拷貝出的新陣列(物件)上運算或處理
+    const newProductsInOrder = [...data].filter((v, i) => {
+      return v.id !== id
+    })
+
+    //3. 設定回原本的狀態
+    setData(newProductsInOrder)
+  }
   return (
     <>
       <div className="col-md-8 cart">
@@ -31,6 +41,9 @@ function OrderList(props) {
               setData={setData}
               amount={amount}
               data={data}
+              handleDelete={() => {
+                handleDelete(id)
+              }}
             />
           )
         })}
