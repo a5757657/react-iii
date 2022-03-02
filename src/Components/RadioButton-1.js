@@ -1,7 +1,7 @@
 import React from 'react'
 
 function RadioButton(props) {
-  const { name, value, checkedValue, handleFieldChange } = props
+  const { name, value, checkedValue, handleFieldChange, required } = props
 
   return (
     <>
@@ -11,6 +11,7 @@ function RadioButton(props) {
         value={value}
         checked={checkedValue === value}
         onChange={handleFieldChange}
+        required={required}
       />
       <label>{value}</label>
     </>

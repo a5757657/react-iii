@@ -1,0 +1,11 @@
+$primary: rgb(148, 36, 240);
+$secondary: rgba(10, 10, 10, 0.842);
+
+@import '~bootstrap/scss/bootstrap.scss';
+
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
